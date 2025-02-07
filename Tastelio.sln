@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio", "Tastelio\Tastelio.csproj", "{3A86DFDC-3411-4842-9893-D8C1BC58C66C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Client", "Tastelio.Client\Tastelio.Client.csproj", "{89448947-B749-4F3A-971A-C666C39BF4C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Api", "Tastelio.Api\Tastelio.Api.csproj", "{20E3CA75-6EA5-4329-B222-DC34586E8052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Domain", "Tastelio.Domain\Tastelio.Domain.csproj", "{9B256E95-10D2-48E1-968B-6AE0B37F3CC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Persistence", "Tastelio.Persistance\Tastelio.Persistence.csproj", "{4B634D1F-D928-4563-9C63-5CC190B23982}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A86DFDC-3411-4842-9893-D8C1BC58C66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A86DFDC-3411-4842-9893-D8C1BC58C66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A86DFDC-3411-4842-9893-D8C1BC58C66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A86DFDC-3411-4842-9893-D8C1BC58C66C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89448947-B749-4F3A-971A-C666C39BF4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89448947-B749-4F3A-971A-C666C39BF4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89448947-B749-4F3A-971A-C666C39BF4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89448947-B749-4F3A-971A-C666C39BF4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E3CA75-6EA5-4329-B222-DC34586E8052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E3CA75-6EA5-4329-B222-DC34586E8052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E3CA75-6EA5-4329-B222-DC34586E8052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E3CA75-6EA5-4329-B222-DC34586E8052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B256E95-10D2-48E1-968B-6AE0B37F3CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B256E95-10D2-48E1-968B-6AE0B37F3CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B256E95-10D2-48E1-968B-6AE0B37F3CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B256E95-10D2-48E1-968B-6AE0B37F3CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B634D1F-D928-4563-9C63-5CC190B23982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B634D1F-D928-4563-9C63-5CC190B23982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B634D1F-D928-4563-9C63-5CC190B23982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B634D1F-D928-4563-9C63-5CC190B23982}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
