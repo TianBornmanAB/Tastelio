@@ -10,7 +10,7 @@ using Tastelio.Persistence;
 
 namespace Tastelio.Persistence.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(TastelioContext))]
     partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

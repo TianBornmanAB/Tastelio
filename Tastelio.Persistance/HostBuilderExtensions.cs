@@ -8,7 +8,7 @@ public static class HostBuilderExtensions
 {
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<Context>(options =>
+        services.AddDbContext<TastelioContext>(options =>
         {
             options.UseSqlServer(configuration.GetConnectionString("TastelioDb"));
         });

@@ -11,7 +11,7 @@ using Tastelio.Persistence;
 
 namespace Tastelio.Persistence.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(TastelioContext))]
     [Migration("20250207192037_initial")]
     partial class initial
     {

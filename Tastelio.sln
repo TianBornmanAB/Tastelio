@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Domain", "Tastelio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Persistence", "Tastelio.Persistance\Tastelio.Persistence.csproj", "{4B634D1F-D928-4563-9C63-5CC190B23982}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Infrastructure", "Tastelio.Infrastructure\Tastelio.Infrastructure.csproj", "{78E6111A-2668-4094-9659-E0C706262CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tastelio.Application", "Tastelio.Application\Tastelio.Application.csproj", "{E438131F-79A4-4D13-8239-CAB6E53B3376}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4B634D1F-D928-4563-9C63-5CC190B23982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B634D1F-D928-4563-9C63-5CC190B23982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B634D1F-D928-4563-9C63-5CC190B23982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E6111A-2668-4094-9659-E0C706262CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E6111A-2668-4094-9659-E0C706262CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E6111A-2668-4094-9659-E0C706262CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E6111A-2668-4094-9659-E0C706262CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E438131F-79A4-4D13-8239-CAB6E53B3376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E438131F-79A4-4D13-8239-CAB6E53B3376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E438131F-79A4-4D13-8239-CAB6E53B3376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E438131F-79A4-4D13-8239-CAB6E53B3376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
