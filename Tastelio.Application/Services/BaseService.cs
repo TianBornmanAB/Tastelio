@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using Tastelio.Application.DataTransferObjects;
+using Tastelio.Application.Services.Abstractions;
 using Tastelio.Domain.Entities;
 using Tastelio.Domain.Repositories;
 
 namespace Tastelio.Application.Services;
 
 public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto : BaseDto
-                                                                      where TEntity : BaseEntity
+                                                                                   where TEntity : BaseEntity
 {
     private readonly IBaseRepository<TEntity> repository;
     protected readonly IMapper mapper;
@@ -17,14 +18,14 @@ public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto
         this.mapper = mapper;
     }
 
-    public async Task Add(TDto dto)
+    public async Task AddAsync(TDto dto)
     {
         var entity = mapper.Map<TEntity>(dto);
 
         await repository.AddAsync(entity);
     }
 
-    public async Task<TDto?> Get(Guid id)
+    public async Task<TDto?> GetAsync(Guid id)
     {
         var entity = await repository.GetAsync(id);
         var dto = mapper.Map<TDto>(entity);
@@ -32,7 +33,7 @@ public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto
         return dto;
     }
 
-    public async Task<IEnumerable<TDto>> Get(IEnumerable<Guid> ids)
+    public async Task<IEnumerable<TDto>> GetAsync(IEnumerable<Guid> ids)
     {
         var entities = await repository.GetAsync(ids);
         var dtos = mapper.Map<IEnumerable<TDto>>(entities);
@@ -40,14 +41,14 @@ public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto
         return dtos;
     }
 
-    public async Task Update(TDto dto)
+    public async Task UpdateAsync(TDto dto)
     {
         var entity = mapper.Map<TEntity>(dto);
 
         await repository.UpdateAsync(entity);
     }
 
-    public async Task Delete(Guid id)
+    public async Task DeleteAsync(Guid id)
     {
         var entity = await repository.GetAsync(id) ?? throw new NullReferenceException();
 

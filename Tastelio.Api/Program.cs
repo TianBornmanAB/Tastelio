@@ -1,3 +1,7 @@
+using Tastelio.Api.Mapping;
+using Tastelio.Application;
+using Tastelio.Application.Mapping;
+using Tastelio.Infrastructure;
 using Tastelio.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +13,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 builder.Services.AddPersistence(builder.Configuration);
+
+builder.Services.AddAutoMapper(typeof(ApiProfile), typeof(ApplicationProfile));
 
 var app = builder.Build();
 
