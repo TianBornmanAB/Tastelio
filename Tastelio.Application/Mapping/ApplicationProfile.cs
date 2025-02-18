@@ -11,5 +11,6 @@ public class ApplicationProfile : Profile
     {
         CreateMap<PatronDto, Patron>()
             .ForMember(dest => dest.DateCreated, opt => opt.Ignore());
+        CreateMap<Patron, PatronDto>();
     }
 }
