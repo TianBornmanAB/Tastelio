@@ -9,6 +9,12 @@ public class ApplicationProfile : Profile
 {
     public ApplicationProfile()
     {
+        // Establishment
+        CreateMap<EstablishmentDto, Establishment>()
+            .ForMember(dest => dest.DateCreated, opt => opt.Ignore());
+        CreateMap<Establishment, EstablishmentDto>();
+
+        // Patron
         CreateMap<PatronDto, Patron>()
             .ForMember(dest => dest.DateCreated, opt => opt.Ignore());
         CreateMap<Patron, PatronDto>();

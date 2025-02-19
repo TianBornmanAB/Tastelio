@@ -9,23 +9,23 @@ namespace Tastelio.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PatronController : ControllerBase
+public class EstablishmentController : ControllerBase
 {
-    private readonly IPatronService service;
+    private readonly IEstablishmentService service;
     private readonly IMapper mapper;
 
-    public PatronController(IPatronService service, IMapper mapper)
+    public EstablishmentController(IEstablishmentService service, IMapper mapper)
     {
         this.service = service;
         this.mapper = mapper;
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddPatron([FromBody] AddPatronRequest request)
+    public async Task<IActionResult> AddEstablishment([FromBody] AddEstablishmentRequest request)
     {
         try
         {
-            var dto = mapper.Map<PatronDto>(request);
+            var dto = mapper.Map<EstablishmentDto>(request);
             
             await service.AddAsync(dto);
             return NoContent();
@@ -37,13 +37,13 @@ public class PatronController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<PatronResponse>> GetPatron([FromQuery] Guid id)
+    public async Task<ActionResult<EstablishmentResponse>> GetEstablishment([FromQuery] Guid id)
     {
         try 
         { 
             var dto = await service.GetAsync(id);
 
-            var response = mapper.Map<PatronResponse>(dto);
+            var response = mapper.Map<EstablishmentResponse>(dto);
             return Ok(response);
         }
         catch
@@ -53,15 +53,15 @@ public class PatronController : ControllerBase
     }
 
     [HttpGet("paged")]
-    public async Task<ActionResult<PagedResponse<PatronResponse>>> GetPatrons([FromQuery] PagedRequest request)
+    public async Task<ActionResult<PagedResponse<EstablishmentResponse>>> GetEstablishments([FromQuery] PagedRequest request)
     {
         try
         {
-            var dto = mapper.Map<PagedDto<PatronDto>>(request);
+            var dto = mapper.Map<PagedDto<EstablishmentDto>>(request);
 
             dto = await service.GetAsync(dto);
 
-            var response = mapper.Map<PagedResponse<PatronResponse>>(dto);
+            var response = mapper.Map<PagedResponse<EstablishmentResponse>>(dto);
             return Ok(response);
         }
         catch
@@ -71,11 +71,11 @@ public class PatronController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdatePatron([FromBody] UpdatePatronRequest request)
+    public async Task<IActionResult> UpdateEstablishment([FromBody] UpdateEstablishmentRequest request)
     {
         try 
         { 
-            var dto = mapper.Map<PatronDto>(request);
+            var dto = mapper.Map<EstablishmentDto>(request);
 
             await service.UpdateAsync(dto);
             return NoContent();
@@ -87,7 +87,7 @@ public class PatronController : ControllerBase
     }    
     
     [HttpDelete]
-    public async Task<IActionResult> DeletePatron([FromQuery] Guid id)
+    public async Task<IActionResult> DeleteEstablishment([FromQuery] Guid id)
     {
         try 
         { 

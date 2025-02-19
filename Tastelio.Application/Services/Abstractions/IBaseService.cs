@@ -8,7 +8,7 @@ public interface IBaseService<TDto, TEntity> where TDto : BaseDto
 {
     Task AddAsync(TDto dto);
     Task<TDto?> GetAsync(Guid id);
-    Task<IEnumerable<TDto>> GetAsync(IEnumerable<Guid> ids);
+    Task<PagedDto<TDto>> GetAsync(PagedDto<TDto> dto);
     Task UpdateAsync(TDto dto);
     Task DeleteAsync(Guid id);
 }

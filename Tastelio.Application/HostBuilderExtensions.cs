@@ -8,6 +8,7 @@ public static class HostBuilderExtensions
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
+        services.AddScoped<IEstablishmentService, EstablishmentService>();
         services.AddScoped<IPatronService, PatronService>();
 
         return services;

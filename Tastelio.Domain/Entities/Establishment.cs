@@ -3,8 +3,8 @@
 public class Establishment : BaseEntity
 {
     public required string Name { get; set; }
-    public decimal Latitude { get; set; }
-    public decimal Longitude { get; set; }
+    public required decimal Latitude { get; set; }
+    public required decimal Longitude { get; set; }
 
     #region Relationships
 

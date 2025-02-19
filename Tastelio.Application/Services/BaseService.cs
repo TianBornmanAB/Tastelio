@@ -7,7 +7,7 @@ using Tastelio.Domain.Repositories;
 namespace Tastelio.Application.Services;
 
 public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto : BaseDto
-                                                                                   where TEntity : BaseEntity
+                                                                      where TEntity : BaseEntity
 {
     private readonly IBaseRepository<TEntity> repository;
     protected readonly IMapper mapper;
@@ -33,12 +33,14 @@ public class BaseService<TDto, TEntity> : IBaseService<TDto, TEntity> where TDto
         return dto;
     }
 
-    public async Task<IEnumerable<TDto>> GetAsync(IEnumerable<Guid> ids)
+    public async Task<PagedDto<TDto>> GetAsync(PagedDto<TDto> dto)
     {
-        var entities = await repository.GetAsync(ids);
-        var dtos = mapper.Map<IEnumerable<TDto>>(entities);
+        var entities = await repository.GetAsync(dto.Page, dto.PageSize);
+        var dtos = entities.Select(mapper.Map<TDto>);
 
-        return dtos;
+        dto.Items = dtos;
+
+        return dto;
     }
 
     public async Task UpdateAsync(TDto dto)
